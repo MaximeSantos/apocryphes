@@ -22,10 +22,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={inter.className}>
         <main className="flex min-h-screen flex-col items-center justify-between p-2">
-          <div className="flex flex-col">
-            <Navbar />
-            <h1 className="self-center text-2xl">APOCRYPHES</h1>
-          </div>
+          <Navbar />
           {children}
           <Footer />
         </main>
