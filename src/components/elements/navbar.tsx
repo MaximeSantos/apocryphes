@@ -9,20 +9,21 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Separator } from '@/components/ui/separator';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-row justify-between items-center px-4 pb-2">
-        <a className="self-center text-2xl hover:underline" href="/">
+        <Link className="self-center text-2xl hover:underline" href="/">
           APOCRYPHES
-        </a>
+        </Link>
         <div className="flex flex-row">
           <nav>
             {/* TODO DISPLAY LOGIN/SIGNUP or PROFILE depending on if user is logged in or not */}
-            <a className="hover:underline m-2" href="/login">
+            <Link className="hover:underline m-2" href="/login">
               Login
-            </a>
+            </Link>
           </nav>
           <DropdownMenu>
             <DropdownMenuTrigger className="hover:underline">Profil</DropdownMenuTrigger>
@@ -30,16 +31,16 @@ export default function Navbar() {
               <DropdownMenuLabel>Nom du personnage actuel</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
-                <a href="/profile">Mon profil</a>
+                <Link href="/profile">Mon profil</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="/profile/characters">Mes personnages</a>
+                <Link href="/profile/characters">Mes personnages</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="/profile/RP">Mes RPs en cours</a>
+                <Link href="/profile/RP">Mes RPs en cours</Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <a href="/profile/edit">Modifier mon profil</a>
+                <Link href="/profile/edit">Modifier mon profil</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
