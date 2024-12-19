@@ -13,15 +13,15 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <div className="flex flex-col w-full">
-      <div className="flex flex-row justify-between items-center px-4 pb-2">
-        <Link className="self-center text-2xl hover:underline" href="/">
+    <div className="flex w-full flex-col">
+      <div className="flex flex-row items-center justify-between px-4 pb-2">
+        <Link className="m-2 self-center text-2xl hover:underline" href="/">
           APOCRYPHES
         </Link>
         <div className="flex flex-row">
           <nav>
             {/* TODO DISPLAY LOGIN/SIGNUP or PROFILE depending on if user is logged in or not */}
-            <Link className="hover:underline m-2" href="/login">
+            <Link className="m-2 hover:underline" href="/login">
               Login
             </Link>
           </nav>
